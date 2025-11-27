@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Puthina.Podcast</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="contribution.css">
+
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="background-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-podcast"></i>
+                </div>
+                <span>Puthina</span>
+            </a>
+
+            <nav class="nav-desktop">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#latest-episode">Episodes</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+
+            <button id="menu-toggle" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="nav-mobile">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#latest-episode">Episodes</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="support-card glass-card">
+            <div class="payment-grid">
+                <!-- Payment Section -->
+                <div class="payment-section">
+                    <h1 style="font-size: clamp(1.5rem, 5vw, 2rem); font-weight: 700; color: var(--text-heading); margin-bottom: 0.5rem;">Support Our Show</h1>
+                    <p style="color: var(--text-body); margin-bottom: 1.5rem; font-size: clamp(0.875rem, 3vw, 1rem);">Your contribution helps us keep the conversations going.</p>
+
+                    <label for="amount" style="display: block; font-weight: 600; color: var(--text-heading); margin-bottom: 0.5rem; font-size: 0.9rem;">Enter amount</label>
+                    
+                    <div class="amount-input-wrapper">
+                        <span class="currency-symbol">₹</span>
+                        <input type="number" id="amount" class="amount-input" placeholder="Enter any amount" min="1">
+                    </div>
+
+                    <div class="amount-buttons">
+                        <button class="amount-btn" data-amount="220">₹220</button>
+                        <button class="amount-btn" data-amount="400">₹400</button>
+                        <button class="amount-btn" data-amount="4400">₹4,400</button>
+                    </div>
+
+                    <a id="upi-link" href="#" class="support-btn disabled">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Support Now</span>
+                    </a>
+                </div>
+
+                <!-- QR Code Section -->
+                <div class="qr-section">
+                    <p style="color: var(--text-body); margin-bottom: 1rem; font-size: clamp(0.875rem, 3vw, 1rem);">Or scan the QR code to pay</p>
+                    <div class="qr-code-wrapper">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=upi://pay?pa=puthina.podcast@ptyes&pn=Puthina.Podcast&cu=INR" alt="UPI QR Code" class="qr-code-img">
+                    </div>
+                    <p class="upi-id">puthina.podcast@ptyes</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-link">
+            <a href="index.html">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Home</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- Thank You Modal -->
+    <div id="thank-you-modal" class="modal">
+        <div class="modal-content glass-card">
+            <button id="close-modal" class="modal-close">&times;</button>
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 class="modal-title">നന്ദി!</h2>
+            <p class="modal-text" style="margin-bottom: 1rem;">നിങ്ങളുടെ പിന്തുണയ്ക്ക് ഹൃദയം നിറഞ്ഞ നന്ദി!</p>
+            <p class="modal-text" style="font-size: 0.875rem;">
+                പെയ്മെന്റ് ഉറപ്പിക്കുന്നതിനായി, ദയവായി സ്ക്രീൻഷോട്ട് 
+                <a href="https://wa.me/919633986314" target="_blank" class="modal-link">ഈ WhatsApp നമ്പറിലേക്ക്</a> 
+                അയച്ചു തരിക.
+            </p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // ===== MOBILE MENU TOGGLE =====
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('overlay');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            menuToggle.innerHTML = mobileMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        overlay.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // ===== HEADER SCROLL ANIMATION =====
+        let lastScrollTop = 0;
+        const header = document.getElementById('main-header');
+        const scrollThreshold = 100;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            if (currentScroll > scrollThreshold) {
+                if (currentScroll > lastScrollTop) {
+                    header.classList.add('hidden');
+                } else {
+                    header.classList.remove('hidden');
+                }
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+
+        // ===== PAYMENT LOGIC =====
+        const amountInput = document.getElementById('amount');
+        const upiLink = document.getElementById('upi-link');
+        const amountButtons = document.querySelectorAll('.amount-btn');
+        const baseUpiUrl = 'upi://pay?pa=puthina.podcast@ptyes&pn=Puthina.Podcast&cu=INR&tn=Contribution';
+
+        function updateUpiLink(amount) {
+            const finalAmount = parseFloat(amount);
+            if (finalAmount > 0 && !isNaN(finalAmount)) {
+                upiLink.href = `${baseUpiUrl}&am=${finalAmount.toFixed(2)}`;
+                upiLink.classList.remove('disabled');
+            } else {
+                upiLink.href = '#';
+                upiLink.classList.add('disabled');
+            }
+        }
+
+        amountButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const amount = button.dataset.amount;
+                amountInput.value = amount;
+                updateUpiLink(amount);
+            });
+        });
+
+        amountInput.addEventListener('input', () => {
+            updateUpiLink(amountInput.value);
+        });
+
+        // ===== THANK YOU MODAL =====
+        const modal = document.getElementById('thank-you-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+
+        function showModal() {
+            modal.classList.add('active');
+        }
+
+        function hideModal() {
+            modal.classList.remove('active');
+        }
+
+        upiLink.addEventListener('click', (e) => {
+            if (upiLink.classList.contains('disabled')) {
+                e.preventDefault();
+                amountInput.focus();
+                return;
+            }
+            setTimeout(() => {
+                showModal();
+            }, 500);
+        });
+
+        closeModalBtn.addEventListener('click', hideModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                hideModal();
+            }
+        });
+    </script>
+</body>
+
+</html>
