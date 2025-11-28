@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,15 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- GSAP & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    
+
     <!-- Lenis Smooth Scroll -->
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
 
@@ -49,7 +52,12 @@
             pointer-events: none;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Poppins', sans-serif;
         }
 
@@ -71,14 +79,18 @@
 
         /* ===== MINT LEAF ANIMATION (NEW) ===== */
         @keyframes leaf-sway {
-            0%, 100% { 
-                transform: rotate(0deg) scale(1); 
+
+            0%,
+            100% {
+                transform: rotate(0deg) scale(1);
             }
-            25% { 
-                transform: rotate(-15deg) scale(1.1); 
+
+            25% {
+                transform: rotate(-15deg) scale(1.1);
             }
-            75% { 
-                transform: rotate(10deg) scale(0.95); 
+
+            75% {
+                transform: rotate(10deg) scale(0.95);
             }
         }
 
@@ -86,7 +98,8 @@
             display: inline-block;
             color: var(--accent);
             margin-left: 10px;
-            transform-origin: bottom center; /* ഇലയുടെ താഴെ നിന്ന് അനങ്ങാൻ */
+            transform-origin: bottom center;
+            /* ഇലയുടെ താഴെ നിന്ന് അനങ്ങാൻ */
             animation: leaf-sway 3.5s ease-in-out infinite;
             /* Filter removed to delete contrast/glow effect */
             vertical-align: middle;
@@ -186,10 +199,13 @@
         }
 
         @keyframes cross-fade-1 {
-            0%, 100% {
+
+            0%,
+            100% {
                 opacity: 0.3;
                 transform: translate(0, 0);
             }
+
             50% {
                 opacity: 0.6;
                 transform: translate(30px, -30px);
@@ -197,10 +213,13 @@
         }
 
         @keyframes cross-fade-2 {
-            0%, 100% {
+
+            0%,
+            100% {
                 opacity: 0.2;
                 transform: translate(0, 0);
             }
+
             50% {
                 opacity: 0.5;
                 transform: translate(-40px, 40px);
@@ -267,7 +286,8 @@
             width: auto;
             object-fit: contain;
             transition: transform 0.3s ease;
-            display: block; /* Default display for large screens */
+            display: block;
+            /* Default display for large screens */
         }
 
         .logo:hover .logo-img {
@@ -441,8 +461,13 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         /* ===== HERO SECTION ===== */
@@ -482,9 +507,12 @@
         }
 
         .hero-text {
-            text-align: center; /* Updated: Center text on all screens */
-            max-width: 800px;   /* Added: Limit width for better readability */
-            margin: 0 auto;     /* Added: Center the container */
+            text-align: center;
+            /* Updated: Center text on all screens */
+            max-width: 800px;
+            /* Added: Limit width for better readability */
+            margin: 0 auto;
+            /* Added: Center the container */
         }
 
         @media (max-width: 1023px) {
@@ -494,7 +522,8 @@
         }
 
         .hero-logo-container {
-            display: none; /* Hiding container as per request */
+            display: none;
+            /* Hiding container as per request */
             justify-content: center;
             align-items: center;
         }
@@ -513,14 +542,16 @@
             margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
-            justify-content: center; /* Updated: Always center title */
+            justify-content: center;
+            /* Updated: Always center title */
             flex-wrap: wrap;
             gap: 0.5rem;
         }
-        
+
         @media (min-width: 1024px) {
             .hero-title {
-                justify-content: center; /* Updated: Ensure center on desktop */
+                justify-content: center;
+                /* Updated: Ensure center on desktop */
             }
         }
 
@@ -554,10 +585,11 @@
                 justify-content: center;
             }
         }
-        
+
         @media (min-width: 1024px) {
             .hero-buttons {
-                justify-content: center; /* Updated: Ensure center on desktop */
+                justify-content: center;
+                /* Updated: Ensure center on desktop */
             }
         }
 
@@ -592,12 +624,10 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                120deg,
-                transparent,
-                rgba(255, 255, 255, 0.2),
-                transparent
-            );
+            background: linear-gradient(120deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.2),
+                    transparent);
             transition: all 0.5s;
         }
 
@@ -657,9 +687,12 @@
         }
 
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0px);
             }
+
             50% {
                 transform: translateY(-20px);
             }
@@ -1203,9 +1236,10 @@
             <div class="hero-text">
                 <!-- Added Mint Leaf with Animation here -->
                 <h1 class="hero-title">
-                    Puthina.Podcast <img src="image/Untitled%20(109%20x%20109%20px).png" alt="Mint Leaf" class="mint-leaf-anim" style="width: 0.8em; height: 0.8em;">
+                    Puthina.Podcast <img src="image/Untitled%20(109%20x%20109%20px).png" alt="Mint Leaf"
+                        class="mint-leaf-anim" style="width: 0.8em; height: 0.8em;">
                 </h1>
-                
+
                 <p class="hero-subtitle">Your Weekly Dose of Insightful Conversations</p>
                 <div class="hero-buttons">
                     <a href="#latest-episode" class="btn-primary">
@@ -1216,47 +1250,50 @@
                     </a>
                 </div>
             </div>
-            
+
             <!-- This is the Logo Container for Big Screens -->
             <div class="hero-logo-container">
                 <img src="image/Untitled design(2).png" alt="Puthina Podcast Logo" class="hero-logo-img" />
             </div>
         </div>
-    <style>
-        /* Large Screen Layout Adjustment */
-        @media (min-width: 1024px) {
-            .hero-content {
-                grid-template-columns: 1.2fr 1fr; /* 2 Columns Layout */
-                text-align: left;
-            }
-            
-            .hero-text {
-                text-align: left;
-                margin: 0;
+        <style>
+            /* Large Screen Layout Adjustment */
+            @media (min-width: 1024px) {
+                .hero-content {
+                    grid-template-columns: 1.2fr 1fr;
+                    /* 2 Columns Layout */
+                    text-align: left;
+                }
+
+                .hero-text {
+                    text-align: left;
+                    margin: 0;
+                }
+
+                .hero-title {
+                    justify-content: flex-start;
+                }
+
+                .hero-buttons {
+                    justify-content: flex-start;
+                }
             }
 
-            .hero-title {
-                justify-content: flex-start;
-            }
-
-            .hero-buttons {
-                justify-content: flex-start;
-            }
-        }
-
-        /* Show Logo Container ONLY on Big Screens */
-        .hero-logo-container {
-            display: none; /* Hidden by default (Mobile/Tablet) */
-            justify-content: center;
-            align-items: center;
-        }
-
-        @media (min-width: 1024px) {
+            /* Show Logo Container ONLY on Big Screens */
             .hero-logo-container {
-                display: flex; /* Visible on Desktop */
+                display: none;
+                /* Hidden by default (Mobile/Tablet) */
+                justify-content: center;
+                align-items: center;
             }
-        }
-    </style>
+
+            @media (min-width: 1024px) {
+                .hero-logo-container {
+                    display: flex;
+                    /* Visible on Desktop */
+                }
+            }
+        </style>
     </section>
 
     <!-- Latest Episode Section -->
@@ -1266,21 +1303,28 @@
 
             <div class="episode-desktop glass-section" style="padding: 1.5rem;">
                 <div class="episode-video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/w4hzhpipPR0?si=sgdncJ7ShrUP-OTj" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/w4hzhpipPR0?si=sgdncJ7ShrUP-OTj" allowfullscreen
+                        loading="lazy"></iframe>
                 </div>
                 <div class="episode-info">
                     <h3 class="episode-title">The Future of Technology: AI, Innovation & Beyond</h3>
-                    <p class="episode-description">In this insightful episode, we dive deep into the world of artificial intelligence, explore cutting-edge innovations, and discuss what the future holds.</p>
+                    <p class="episode-description">In this insightful episode, we dive deep into the world of artificial
+                        intelligence, explore cutting-edge innovations, and discuss what the future holds.</p>
                 </div>
             </div>
 
             <div class="episode-mobile">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="glass-card" style="display: block; overflow: hidden; text-decoration: none;">
-                    <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=500&h=300&fit=crop" alt="Latest Episode" style="width: 100%; height: 10rem; object-fit: cover;">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="glass-card"
+                    style="display: block; overflow: hidden; text-decoration: none;">
+                    <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=500&h=300&fit=crop"
+                        alt="Latest Episode" style="width: 100%; height: 10rem; object-fit: cover;">
                     <div style="padding: 1rem;">
-                        <h3 class="episode-title" style="font-size: 1rem; margin-bottom: 0.5rem;">The Future of Technology: AI, Innovation & Beyond</h3>
-                        <p class="episode-description" style="font-size: 0.875rem;">Exploring AI, innovation, and the future of tech</p>
-                        <button class="btn-primary" style="width: 100%; margin-top: 1rem; font-size: 0.875rem;">Watch Now</button>
+                        <h3 class="episode-title" style="font-size: 1rem; margin-bottom: 0.5rem;">The Future of
+                            Technology: AI, Innovation & Beyond</h3>
+                        <p class="episode-description" style="font-size: 0.875rem;">Exploring AI, innovation, and the
+                            future of tech</p>
+                        <button class="btn-primary" style="width: 100%; margin-top: 1rem; font-size: 0.875rem;">Watch
+                            Now</button>
                     </div>
                 </a>
             </div>
@@ -1292,9 +1336,12 @@
         <div class="container-max">
             <h2 class="section-title">About Puthina.Podcast</h2>
             <div class="about-content glass-section">
-                <p>Welcome to Puthina.Podcast, your gateway to extraordinary conversations and deep insights. We believe that the best ideas emerge when curious minds come together.</p>
-                <p>Every week, we bring you carefully curated episodes featuring industry leaders, innovators, artists, and changemakers from around the world.</p>
-                <p>Whether you're interested in technology, entrepreneurship, personal growth, or simply love a good conversation, Puthina.Podcast has something for you.</p>
+                <p>Welcome to Puthina.Podcast, your gateway to extraordinary conversations and deep insights. We believe
+                    that the best ideas emerge when curious minds come together.</p>
+                <p>Every week, we bring you carefully curated episodes featuring industry leaders, innovators, artists,
+                    and changemakers from around the world.</p>
+                <p>Whether you're interested in technology, entrepreneurship, personal growth, or simply love a good
+                    conversation, Puthina.Podcast has something for you.</p>
             </div>
         </div>
     </section>
@@ -1303,7 +1350,8 @@
     <section id="contact" class="section">
         <div class="container-max">
             <h2 class="section-title">Get in Touch</h2>
-            <form action="https://formspree.io/f/xyzabc123" method="POST" id="contact-form" class="contact-form glass-card">
+            <form action="https://formspree.io/f/zoKrdJwDE1E" method="POST" id="contact-form"
+                class="contact-form glass-card">
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -1315,13 +1363,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
+                    <label for="message">Message / Review</label>
+                    <textarea id="message" name="message" placeholder="Your message or review here..."
+                        required></textarea>
                 </div>
 
                 <button type="submit" class="form-submit">Send Message</button>
                 <div id="form-message" class="form-message"></div>
             </form>
+
         </div>
     </section>
 
@@ -1360,7 +1410,8 @@
                     <a href="https://youtube.com" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
                     <a href="https://spotify.com" class="social-icon" title="Spotify"><i class="fab fa-spotify"></i></a>
                     <a href="https://twitter.com" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="https://instagram.com" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://instagram.com" class="social-icon" title="Instagram"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -1390,8 +1441,8 @@
         menuToggle.addEventListener('click', () => {
             mobileMenu.classList.toggle('active');
             overlay.classList.toggle('active');
-            menuToggle.innerHTML = mobileMenu.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
+            menuToggle.innerHTML = mobileMenu.classList.contains('active')
+                ? '<i class="fas fa-times"></i>'
                 : '<i class="fas fa-bars"></i>';
         });
 
@@ -1442,7 +1493,7 @@
 
         // ===== ACTIVE LINK TRACKING =====
         const navLinks = document.querySelectorAll('.nav-desktop a, .nav-mobile a');
-        
+
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 navLinks.forEach(l => l.classList.remove('active'));
@@ -1458,7 +1509,7 @@
                 if (target) {
                     const headerHeight = header.offsetHeight;
                     const targetPosition = target.offsetTop - headerHeight;
-                    
+
                     // Use Lenis for smooth scroll if available, otherwise fallback
                     if (typeof lenis !== 'undefined') {
                         lenis.scrollTo(target, { offset: -headerHeight });
@@ -1536,4 +1587,5 @@
         });
     </script>
 </body>
+
 </html>
