@@ -175,24 +175,25 @@ header.hidden {
     transform: scale(1.05);
 }
 
-.logo-icon {
-    width: 40px;
+/* Updated CSS for Logo Image */
+.logo-img {
     height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(229, 231, 235, 0.1);
-    border: 2px solid #d1d5db;
-    border-radius: 0.5rem;
-    font-size: 1.25rem;
-    color: #e5e7eb;
-    transition: all 0.3s ease;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    display: block;
+    /* Default display for large screens */
 }
 
-.logo:hover .logo-icon {
-    background: rgba(229, 231, 235, 0.2);
-    border-color: #e5e7eb;
+.logo:hover .logo-img {
     transform: rotate(10deg);
+}
+
+/* Hide Logo on Small Screens (Mobile) */
+@media (max-width: 640px) {
+    .logo-img {
+        display: none;
+    }
 }
 
 .nav-desktop {
@@ -233,6 +234,24 @@ header.hidden {
 .nav-desktop a:hover::after,
 .nav-desktop a.active::after {
     width: 80%;
+}
+
+.support-btn {
+    padding: 0.65rem 1.5rem;
+    background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+    color: #111827;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(229, 231, 235, 0.2);
+}
+
+.support-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(229, 231, 235, 0.4);
 }
 
 .menu-btn {
@@ -306,6 +325,18 @@ header.hidden {
     background: rgba(229, 231, 235, 0.15);
     border-left-color: #d1d5db;
     padding-left: 1.5rem;
+}
+
+.nav-mobile .support-btn-mobile {
+    margin-top: 1rem;
+    padding: 0.875rem;
+    background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+    color: #111827;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .overlay {
